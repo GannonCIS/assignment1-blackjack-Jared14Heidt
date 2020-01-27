@@ -10,5 +10,11 @@ package blackjack;
  * @author gubotdev
  */
 public class Card {
+    public final String RANK;
+    public final String SUIT; //have to be set when you hit compilation time
     
+    public Card(String r, String s){
+        RANK = r;
+        SUIT = s;
+    }
 }
