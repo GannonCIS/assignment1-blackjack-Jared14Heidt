@@ -51,8 +51,14 @@ public class Deck {
     }
     
     public Card dealCard(){ //a class is the data type of an object
+        Card next = myCards[nextCard];
+        nextCard++;
         
-        return null; //do not forget to change this 
+        if(nextCard > 51){
+            shuffle();
+            nextCard = 0;
+        }
+        return next;
     }
         
         
