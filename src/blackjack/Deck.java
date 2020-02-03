@@ -19,6 +19,7 @@ public class Deck {
     
     public Deck(){ //empty constructor, it is its own return type
         initDeck(); //whenever I create a deck it will initialize the deck
+        shuffle();
     }
     
     private void initDeck(){
@@ -29,10 +30,17 @@ public class Deck {
                 index++;
             }
         }
+        //for(int i = 0; i < mycards.length; i++){
+            //myCards[i] = new Card(ranks[i % 13], suits[1/13])}
     }
     
     private void shuffle(){
-        
+        for(int i = 0; i < myCards.length; i++){
+            Card temp = myCards[i];
+            int rand = (int) (Math.random()*52);
+            myCards[i] = myCards[rand];
+            myCards[rand] = temp;
+        }
     }
     
     //printDeck is for testing only --delete me
