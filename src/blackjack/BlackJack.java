@@ -20,12 +20,6 @@ public class BlackJack {
         
         Dealer Jeeves = new Dealer(3);
         
-        
-        Jeeves.dealOutOpeningHand();
-        Jeeves.playOutDealerHand();
- 
-        Jeeves.takePlayerTurns();
-        Jeeves.declareWinners();
-        
+        Jeeves.playGame();
     }
 }
