@@ -44,11 +44,11 @@ public class Deck {
     }
     
     //printDeck is for testing only --delete me
-    public void printDeck(){
-        for(int i = 0; i < myCards.length; i++){
-            System.out.println(myCards[i].RANK + " of " + myCards[i].SUIT);
-        }
-    }
+//    public void printDeck(){
+//        for(int i = 0; i < myCards.length; i++){
+//            System.out.println(myCards[i].RANK + " of " + myCards[i].SUIT);
+//        }
+//    }
     
     public Card dealCard(){ //a class is the data type of an object
         Card next = myCards[nextCard];
@@ -59,8 +59,5 @@ public class Deck {
             nextCard = 0;
         }
         return next;
-    }
-        
-        
-        
+    }       
 }

@@ -31,7 +31,7 @@ public class Dealer {
         }
    }
    
-   public void takePlayerTruns(){
+   public void takePlayerTurns(){
        for(Player currPlayer : myPlayers){
            while(currPlayer.getMyHand().getNumOfCards() < 5 && currPlayer.getMyHand().getScore() < 21){
                System.out.println(currPlayer.getName() + "'s Hand:");
@@ -54,8 +54,19 @@ public class Dealer {
    }
    
    public void declareWinners(){
-       
-       
+       for(Player currPlayer : myPlayers){
+           if(dealerHand.getScore() == 21 || dealerHand.getNumOfCards() == 5){
+               System.out.println("The Dealer Wins.");
+           }else if(currPlayer.getMyHand().getScore() > 21){
+               System.out.println(currPlayer.getName() + " Loses.");
+           }else if(currPlayer.getMyHand().getNumOfCards() == 5){
+               System.out.println(currPlayer + " Wins.");
+           }else if(dealerHand.getScore() >= currPlayer.getMyHand().getScore()){
+               System.out.println(currPlayer + " Loses.");
+           }else{
+               System.out.println(currPlayer + " Wins");
+           }
+       }
    }
    
    private void initMyPlayers(int numPlayers){

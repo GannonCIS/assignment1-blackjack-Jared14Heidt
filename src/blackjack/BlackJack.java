@@ -18,10 +18,14 @@ public class BlackJack {
         Deck myDeck = new Deck();
         Hand myHand = new Hand();
         
-        for(int i = 0; i < 6; i++){
-            myHand.addCard(myDeck.dealCard());
-            System.out.println("numOfCards: " + myHand.getNumOfCards() + " | Score: " + myHand.getScore());
-        }
+        Dealer Jeeves = new Dealer(3);
+        
+        
+        Jeeves.dealOutOpeningHand();
+        Jeeves.playOutDealerHand();
+ 
+        Jeeves.takePlayerTurns();
+        Jeeves.declareWinners();
+        
     }
-    
 }
